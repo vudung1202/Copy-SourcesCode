@@ -1,0 +1,24 @@
+{
+  "name": "CopySources",
+  "version": "0.1.0",
+  "description": "Double click to copy code from StackOverflow",
+  "author": "DeeV",
+	"options_ui": {
+		"page": "App/App.html",
+		"chrome_style": true
+	},
+	"manifest_version": 2,
+	"permissions": [
+		"clipboardWrite",
+		"storage"
+	],
+	"content_scripts": [{
+		"matches": ["https://*/*", "http://*/*"],
+		"js": ["scripts/index.js"],
+		"run_at": "document_end"
+	}],
+	"icons": {
+		"144": "images/icon.png"
+	},
+	"offline_enabled": true
+}
